@@ -8,7 +8,7 @@ First Clone the Repo, `npm install` then `npm start` to run the server
 Your goal is to follow the instructions in the code comments, and build your own PokeDex!
 If you get stuck, you can checkout into the different branches listed below.
 Each branch builds on the branch before to get you to the final solution.
-Read the comments below to understand what each branch contains. As long as you commit your work to `main`, you can hop into a branch and hop back to your own code to check your work.
+Read the corresponding comments to understand what each branch contains. As long as you commit your work to `main`, you can hop into a branch and hop back to your own code to check your work.
 
 ###### To checkout into any of these branches
 ...in your vscode terminal type `git checkout step2` (dont forget to commit or stash your unsaved changes!)
