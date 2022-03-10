@@ -24,23 +24,35 @@ import Zoo from './components/Zoo'
  */
 
 function App() {
-  const [pokemonList, setPokemonList] = useState([])
+  /* Because we need access to next and previous, lets just keep a track of the whole response
+     instead of just the array of names. We also need to account for needing initial values or 
+     our Zoo component will break! */
+  const [responseObj, setResponseObj] = useState({
+    results: [],
+    previous: null,
+    next: null,
+    count: null,
+  })
+  const [currentUrl, setCurrentURL] = useState(
+    'https://pokeapi.co/api/v2/pokemon?limit=10'
+  )
 
   useEffect(() => {
     async function getPokemon() {
-      const pokemon = await fetchPokemon(
-        'https://pokeapi.co/api/v2/pokemon?limit=10'
-      )
-      setPokemonList(pokemon)
+      const pokemonResponse = await fetchPokemon(currentUrl)
+      console.log({
+        pokemonResponse,
+      })
+      setResponseObj(pokemonResponse)
     }
     getPokemon()
-  }, [])
+  }, [currentUrl])
 
-  console.log(pokemonList)
+  console.log(responseObj)
 
   return (
     <div>
-      <Zoo pokemonList={pokemonList} />
+      <Zoo responseObj={responseObj} setCurrentURL={setCurrentURL} />
     </div>
   )
 }

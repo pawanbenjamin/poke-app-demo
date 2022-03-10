@@ -1,6 +1,9 @@
 import React from 'react'
 
-const Zoo = ({ pokemonList }) => {
+// Remember we changed out data
+const Zoo = ({ responseObj, setCurrentURL }) => {
+  // Now we can take the array of names off the object
+  const pokemonList = responseObj.results
   return (
     <div>
       {pokemonList.map((pokemon) => {
@@ -10,6 +13,18 @@ const Zoo = ({ pokemonList }) => {
           </div>
         )
       })}
+      <button
+        disabled={!responseObj.previous}
+        onClick={() => setCurrentURL(responseObj.previous)}
+      >
+        Previous
+      </button>
+      <button
+        disabled={!responseObj.next}
+        onClick={() => setCurrentURL(responseObj.next)}
+      >
+        Next
+      </button>
     </div>
   )
 }
