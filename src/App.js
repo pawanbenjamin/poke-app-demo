@@ -1,5 +1,6 @@
 import React from 'react'
-
+import { useState, useEffect } from 'react'
+import { fetchPokemon } from './api'
 /*
     GOAL:
         1. To fetch pokemon from the PokeAPI, 
@@ -19,6 +20,20 @@ import React from 'react'
  */
 
 function App() {
+  const [pokemonList, setPokemonList] = useState([])
+
+  useEffect(() => {
+    async function getPokemon() {
+      const pokemon = await fetchPokemon(
+        'https://pokeapi.co/api/v2/pokemon?limit=10'
+      )
+      setPokemonList(pokemon)
+    }
+    getPokemon()
+  }, [])
+
+  console.log(pokemonList)
+
   return <div></div>
 }
 
