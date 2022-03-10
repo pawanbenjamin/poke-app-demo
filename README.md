@@ -1,5 +1,5 @@
 # poke-app-demo
-API documentation [HERE] (https://pokeapi.co/)
+API documentation <a href="https://pokeapi.co/" target="_top">HERE</a>
 ## Create your own basic Poke-Dex
 ### Instructions: 
 
