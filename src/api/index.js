@@ -18,6 +18,6 @@ export const fetchSinglePokemon = async (url) => {
   // console.log this data variable! There is so much info here!
   const data = await response.json()
   console.log(data)
-  const { name, species, sprites } = data
-  return { name, species, sprites }
+  const { name, species, sprites, height, weight } = data
+  return { name, species, sprites, height, weight }
 }

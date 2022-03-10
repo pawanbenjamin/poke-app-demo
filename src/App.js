@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import { fetchPokemon, fetchSinglePokemon } from './api'
 import Zoo from './components/Zoo'
+import FeaturedPokemon from './components/FeaturedPokemon'
 /*
     GOAL:
         1. To fetch pokemon from the PokeAPI, 
@@ -72,6 +73,11 @@ function App() {
         setCurrentURL={setCurrentURL}
         setSelectedPokemonURL={setSelectedPokemonURL}
       />
+      {selectedPokemon.name ? (
+        <FeaturedPokemon selectedPokemon={selectedPokemon} />
+      ) : (
+        <h5>Select a Pokemon to find out more!</h5>
+      )}
     </div>
   )
 }
