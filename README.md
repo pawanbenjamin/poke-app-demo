@@ -2,7 +2,9 @@
 
 ### Instructions 
 ##### Start on the `Main` branch
-Feel free to complete eveything on your own. If you get stuck, you can checkout into the different branches, which each complete a new piece of the application
+Our Goal is to follow the instructions in the comments, and try to complete eveything on your own!
+If you get stuck, you can checkout into the different branches below, which take you through the key parts of the final solution!
+Read the comments below to understand what each branch contains
 
 `git checkout step2`
 - Ajax Helper Defined
