@@ -20,8 +20,14 @@ import FeaturedPokemon from './components/FeaturedPokemon'
                 Use the urls in the API response's next and previous properties! 
                 Think about how we can use the useState() hook to change the url
                 we pass to our AJAX helper function, so we can call it again!
+
+           ...from here you could take things any number of ways... 
+           you could...
       5. Use the url property of our API response and write fetchSinglePokemon AJAX helper
-      6. Call the function when clicking on a pokemon's name
+      6. Use the useState() and useEffect() hooks to get our singlePokemon in our App.js
+      7. Create a new component to render the singlePokemon
+
+      Good Luck!
  */
 
 function App() {
