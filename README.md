@@ -1,12 +1,12 @@
 # poke-app-demo
 ## Create your own basic Poke-Dex
 ### Instructions 
-##### Start on the `Main` branch
-Our Goal is to follow the instructions in the comments, and try to complete eveything on your own!
+##### Start on the `main` branch
+Your goal is to follow the instructions in the code comments, and try to complete it on your own!
 If you get stuck, you can checkout into the different branches below, which take you through the key parts of the final solution!
 Read the comments below to understand what each branch contains
 
-`git checkout step2`
+In your vscode terminal you can type `git checkout step2` (dont forget to commit or stash your work!)
 - Ajax Helper Defined
 - State values initialized
 - Axaj called in useEffect
