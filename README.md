@@ -2,7 +2,7 @@
 ## Create your own basic Poke-Dex
 ### Instructions: 
 
-First Clone the Repo, then `npm install`
+First Clone the Repo, `npm install` then `npm start` to run the server
 
 ##### Begin on the `main` branch
 Your goal is to follow the instructions in the code comments, and build your own PokeDex!
