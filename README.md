@@ -1,4 +1,5 @@
 # poke-app-demo
+API documentation [HERE] (https://pokeapi.co/)
 ## Create your own basic Poke-Dex
 ### Instructions: 
 
