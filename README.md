@@ -1,5 +1,5 @@
 # poke-app-demo
-
+## Create your own basic Poke-Dex
 ### Instructions 
 ##### Start on the `Main` branch
 Our Goal is to follow the instructions in the comments, and try to complete eveything on your own!
