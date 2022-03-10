@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { fetchPokemon } from './api'
+import { fetchPokemon, fetchSinglePokemon } from './api'
 import Zoo from './components/Zoo'
 /*
     GOAL:
@@ -36,9 +36,13 @@ function App() {
   const [currentUrl, setCurrentURL] = useState(
     'https://pokeapi.co/api/v2/pokemon?limit=10'
   )
+  /* We need a new state variable to keep track of the selected Pokemon */
+  const [selectedPokemon, setSelectedPokemon] = useState({})
+  const [selectedPokemonURL, setSelectedPokemonURL] = useState(null)
 
   useEffect(() => {
     async function getPokemon() {
+      // changed these variables to reflect our API data
       const pokemonResponse = await fetchPokemon(currentUrl)
       console.log({
         pokemonResponse,
@@ -48,11 +52,26 @@ function App() {
     getPokemon()
   }, [currentUrl])
 
-  console.log(responseObj)
+  /** We're going to use another useEffect() to just handle the seletedPokemon */
+  useEffect(() => {
+    async function getSinglePokemon() {
+      if (selectedPokemonURL) {
+        const singlePokemonData = await fetchSinglePokemon(selectedPokemonURL)
+        setSelectedPokemon(singlePokemonData)
+      }
+    }
+    getSinglePokemon()
+  }, [selectedPokemonURL])
+
+  console.log(selectedPokemon)
 
   return (
     <div>
-      <Zoo responseObj={responseObj} setCurrentURL={setCurrentURL} />
+      <Zoo
+        responseObj={responseObj}
+        setCurrentURL={setCurrentURL}
+        setSelectedPokemonURL={setSelectedPokemonURL}
+      />
     </div>
   )
 }

@@ -8,6 +8,16 @@ const url = 'https://pokeapi.co/api/v2/pokemon?limit=10'
 export const fetchPokemon = async (url) => {
   const response = await fetch(url)
   const data = await response.json()
-  // changed to just return data, so we can have access to the previous and next properties
+  /* changed to just return data, so we can have access to 
+    the previous and next properties for our buttons */
   return data
+}
+
+export const fetchSinglePokemon = async (url) => {
+  const response = await fetch(url)
+  // console.log this data variable! There is so much info here!
+  const data = await response.json()
+  console.log(data)
+  const { name, species, sprites } = data
+  return { name, species, sprites }
 }
